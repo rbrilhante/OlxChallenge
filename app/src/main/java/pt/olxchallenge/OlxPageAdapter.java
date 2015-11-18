@@ -10,11 +10,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 public class OlxPageAdapter extends FragmentStatePagerAdapter {
 
     private int mNumOfTabs;
-    private FragmentManager fragmentManeger;
 
     public OlxPageAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
-        this.fragmentManeger = fm;
         this.mNumOfTabs = NumOfTabs;
     }
 
@@ -23,11 +21,11 @@ public class OlxPageAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
+                OlxListFragment olxListFragment = new OlxListFragment();
+                return olxListFragment;
+            case 1:
                 MapFragment mapFragment = new MapFragment();
                 return mapFragment;
-            case 1:
-                MapFragment tab2 = new MapFragment();
-                return tab2;
             default:
                 return null;
         }

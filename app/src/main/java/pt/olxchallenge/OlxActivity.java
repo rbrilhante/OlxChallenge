@@ -9,7 +9,6 @@ import android.support.v4.view.ViewPager;
 
 public class OlxActivity extends FragmentActivity {
 
-    public static FragmentManager fragmentManager;
     public ViewPager mViewPager;
 
     @Override
@@ -17,11 +16,9 @@ public class OlxActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        fragmentManager = getSupportFragmentManager();
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Mapa"));
         tabLayout.addTab(tabLayout.newTab().setText("Lista"));
+        tabLayout.addTab(tabLayout.newTab().setText("Mapa"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
