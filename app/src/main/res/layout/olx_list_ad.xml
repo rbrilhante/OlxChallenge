@@ -11,17 +11,15 @@
         android:id="@+id/textItemTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:textColor="@android:color/black"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textItemPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:textColor="@android:color/black"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:layout_marginTop="3dp"/>
 
 
@@ -35,16 +33,14 @@
             android:id="@+id/textViewItemDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:textSize="10dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textViewItemLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="8dp"
-            android:textSize="10dp" />
+            android:textSize="12sp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">OlxChallenge</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_olx_activity">OlxChallenge</string>
+
+    <string name="tab_list">Lista</string>
+    <string name="tab_map">Mapa</string>
+
+    <string name="location">Localização:</string>
 </resources>

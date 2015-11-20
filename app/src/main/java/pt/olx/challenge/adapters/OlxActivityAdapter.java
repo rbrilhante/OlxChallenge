@@ -1,19 +1,22 @@
-package pt.olxchallenge;
+package pt.olx.challenge.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import pt.olx.challenge.fragments.MapFragment;
+import pt.olx.challenge.fragments.OlxListFragment;
+
 /**
  * Created by adminusrlocal on 17-11-2015.
  */
-public class OlxPageAdapter extends FragmentStatePagerAdapter {
+public class OlxActivityAdapter extends FragmentStatePagerAdapter {
 
     private int mNumOfTabs;
 
-    public OlxPageAdapter(FragmentManager fm, int NumOfTabs) {
+    public OlxActivityAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
-        this.mNumOfTabs = NumOfTabs;
+        this.mNumOfTabs = numOfTabs;
     }
 
     @Override

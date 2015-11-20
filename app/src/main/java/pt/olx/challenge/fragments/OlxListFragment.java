@@ -1,11 +1,16 @@
-package pt.olxchallenge;
+package pt.olx.challenge.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import pt.olx.challenge.activities.OlxAdsActivity;
+import pt.olx.challenge.domain.OlxAd;
+import pt.olx.challenge.utils.DomainUtils;
+import pt.olxchallenge.R;
+import pt.olx.challenge.adapters.OlxAdsAdapter;
 
 /**
  * Created by Asus on 18-11-2015.
@@ -15,17 +20,16 @@ public class OlxListFragment extends ListFragment{
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2" };
-        OlxListAdapter adapter = new OlxListAdapter(getActivity(),
-                R.layout.olx_list_item, values);
+        OlxAdsAdapter adapter = new OlxAdsAdapter(getActivity(),
+                R.layout.olx_list_ad, DomainUtils.olxAdList);
         setListAdapter(adapter);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Intent intent = new Intent(getActivity(), OlxItemsActivity.class);
+        OlxAd olxAd = DomainUtils.olxAdList.get(position);
+        Intent intent = new Intent(getActivity(), OlxAdsActivity.class);
+        intent.putExtra("olxAdId", olxAd.getId());
         startActivity(intent);
     }
 }
